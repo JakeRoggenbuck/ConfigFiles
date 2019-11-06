@@ -117,7 +117,10 @@ alias em='emacs'
 alias sem='sudo emacs'
 
 alias g='git'
-alias stat='status'
+alias gstat='git status'
+alias gbran='git branch'
+alias gcheck='git checkout'
+alias gcom='git commit'
 
 alias bg='feh --bg-fill'
 
