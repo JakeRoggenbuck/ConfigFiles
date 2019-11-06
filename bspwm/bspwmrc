@@ -5,7 +5,7 @@ compton &
 polybar example &
 
 
-bash /home/jake/.scripts/bspwmstartup
+bash $HOME/.scripts/bspwmstartup
 
 bspc monitor DVI-I-1 -d I II III IV
 

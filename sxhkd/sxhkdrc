@@ -27,11 +27,11 @@ super + Escape
 
 # dvorak
 super + alt + d
-	bash /home/jake/.scripts/dvorakkeyboard
+	bash $HOME/.scripts/dvorakkeyboard
 
 # us
 super + alt + u
-	bash /home/jake/.scripts/uskeyboard
+	bash $HOME/.scripts/uskeyboard
 
 #
 # bspwm hotkeys
