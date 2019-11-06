@@ -115,6 +115,14 @@ alias cls='clear && ls'
 
 alias em='emacs'
 alias sem='sudo emacs'
+
+alias g='git'
+alias stat='status'
+
+alias bg='feh --bg-fill'
+
+alias groffme='groff -Tps -me'
+
 xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
