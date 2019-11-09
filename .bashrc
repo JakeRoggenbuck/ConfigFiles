@@ -144,6 +144,9 @@ shopt -s expand_aliases
 shopt -s histappend
 HISTFILE='/home/jake/.hist/bash_history'
 
+# Git auto complete
+source ~/.scripts/git-completion
+
 #
 # # ex - archive extractor
 # # usage: ex <file>
