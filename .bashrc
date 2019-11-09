@@ -147,7 +147,9 @@ HISTFILE='/home/jake/.hist/bash_history'
 # Git auto complete
 source ~/.scripts/git-completion
 
-#
+# Git promt config
+source ~/.scripts/git-prompt
+
 # # ex - archive extractor
 # # usage: ex <file>
 ex ()
