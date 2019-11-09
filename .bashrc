@@ -122,6 +122,8 @@ alias gbran='git branch'
 alias gcheck='git checkout'
 alias gcom='git commit'
 
+alias logg='git log --graph --decorate --all'
+
 alias bg='feh --bg-fill'
 
 alias groffme='groff -Tps -me'
