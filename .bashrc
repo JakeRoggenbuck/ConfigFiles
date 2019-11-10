@@ -117,10 +117,10 @@ alias em='emacs'
 alias sem='sudo emacs'
 
 alias g='git'
-alias gstat='git status'
-alias gbran='git branch'
-alias gcheck='git checkout'
-alias gcom='git commit'
+alias stat='git status'
+alias br='git branch'
+alias check='git checkout'
+alias com='git commit'
 
 alias logg='git log --graph --decorate --all'
 
