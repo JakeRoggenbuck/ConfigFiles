@@ -10,15 +10,6 @@ map <leader>t :%s/ $//g
 
 set splitbelow splitright
 
-" Map auto complete of (, ", ', [
-inoremap ( ()<esc>i
-inoremap [ []<esc>i
-inoremap { {}<esc>i
-inoremap $1 {<esc>o}<esc>O
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
-inoremap < <><esc>i
-
 " html auto complete; source Luke Smith
 autocmd FileType html inoremap ,b <b></b><Space><++><Esc>FbT>i
 autocmd FileType html inoremap ,it <em></em><Space><++><Esc>FeT>i
