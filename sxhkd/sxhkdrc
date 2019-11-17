@@ -2,6 +2,12 @@
 
 # terminal emulator
 super + Return
+	alacritty
+
+super + shift + Return
+	termite	
+
+ctrl + shift + Return
 	xfce4-terminal
 
 # program launcher
