@@ -1,6 +1,4 @@
-#
 # wm independent hotkeys
-#
 
 # terminal emulator
 super + Return
@@ -23,12 +21,23 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
+#audio
+
+super + F2
+	amixer -D pulse sset Master 5%-
+
+super + F3
+	amixer -D pulse sset Master 5%+
+
+#backlight
+
+super + F11
+	xbacklight -dec 5
+
+super + F12
+	xbacklight -inc 5
+
 # keyboard hot keys
-#
-
-# audio
-
 
 # dvorak
 super + alt + d
@@ -38,9 +47,7 @@ super + alt + d
 super + alt + u
 	bash $HOME/.scripts/uskeyboard
 
-#
 # bspwm hotkeys
-#
 
 # quit/restart bspwm
 super + shift + {e,r}
@@ -62,9 +69,7 @@ super + y
 super + g
 	bspc node -s biggest
 
-#
 # state/flags
-#
 
 # set the window state
 super + {t,shift + t,a,f}
@@ -74,9 +79,7 @@ super + {t,shift + t,a,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-#
 # focus/swap
-#
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
@@ -108,9 +111,7 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-#
 # preselect
-#
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -128,9 +129,7 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
 # move/resize
-#
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
