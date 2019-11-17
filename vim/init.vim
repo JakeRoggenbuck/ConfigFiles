@@ -1,6 +1,6 @@
 let mapleader =","
 
-set number
+set number relativenumber
 
 " sets spell check
 map <leader>o :setlocal spell! spelllang=en_us<CR>
