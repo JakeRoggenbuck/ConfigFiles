@@ -109,11 +109,8 @@ alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -lah'
 
-alias v='vim'
-alias sv='sudo vim'
-
+alias v="nvim"
 alias nv='nvim'
-
 alias snv='sudo nvim'
 
 alias ra='ranger'
