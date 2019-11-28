@@ -2,10 +2,10 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	termite
 
 super + shift + Return
-	termite	
+	alacritty
 
 ctrl + shift + Return
 	xfce4-terminal
