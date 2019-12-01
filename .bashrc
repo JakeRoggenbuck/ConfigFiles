@@ -1,6 +1,11 @@
-#
+#  ____            _              
+# | __ )  __ _ ___| |__  _ __ ___ 
+# |  _ \ / _` / __| '_ \| '__/ __|
+# | |_) | (_| \__ \ | | | | | (__ 
+# |____/ \__,_|___/_| |_|_|  \___|
+
 # ~/.bashrc
-#
+
 
 [[ $- != *i* ]] && return
 
@@ -90,49 +95,10 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias a='fasd -a'        # any
-alias s='fasd -si'       # show / search / select
-alias d='fasd -d'        # directory
-alias f='fasd -f'        # file
-alias sd='fasd -sid'     # interactive directory selection
-alias sf='fasd -sif'     # interactive file selection
-alias z='fasd_cd -d'     # cd, same functionality as j in autojump
-alias zz='fasd_cd -d -i' # cd with interactive selection
-
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
-alias more=less
-
-alias ll='ls -lh'
-alias la='ls -a'
-alias lla='ls -lah'
-
-alias v="nvim"
-alias nv='nvim'
-alias snv='sudo nvim'
-
-alias ra='ranger'
-alias sr='sudo ranger'
-
-alias c='clear'
-alias cls='clear && ls'
-
-alias em='emacs'
-alias sem='sudo emacs'
-
-alias g='git'
-alias stat='git status'
-alias br='git branch'
-alias check='git checkout'
-alias com='git commit'
-
-alias logg='git log --graph --decorate --all'
-
-alias bg='feh --bg-fill'
-
-alias groffme='groff -Tps -me'
+# Alias file
+if [ -e $HOME/.bash_aliases ]; then
+    source $HOME/.bash_aliases
+fi
 
 xhost +local:root > /dev/null 2>&1
 
@@ -146,12 +112,12 @@ shopt -s checkwinsize
 
 shopt -s expand_aliases
 
-shopt -s autocd
-
 # export QT_SELECT=4
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
+
+shopt -s autocd
 
 HISTSIZE=10000
 HISTFILESIZE=20000
