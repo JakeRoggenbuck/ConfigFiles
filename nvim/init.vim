@@ -14,6 +14,9 @@ set ts=4 sw=4
 
 set nowrap
 
+set history=1000
+set undolevels=1000
+
 " html auto complete; source Luke Smith
 autocmd FileType html inoremap ,b <b></b><Space><++><Esc>FbT>i
 autocmd FileType html inoremap ,it <em></em><Space><++><Esc>FeT>i
