@@ -12,15 +12,8 @@ set splitbelow splitright
 
 set ts=4 sw=4
 
-set nowrap
-
 set history=1000
 set undolevels=1000
-
-noremap <Up> 5k
-noremap <Down> 5j
-noremap <Right> 5l
-noremap <Left> 5h
 
 " html auto complete; source Luke Smith
 autocmd FileType html inoremap ,b <b></b><Space><++><Esc>FbT>i
