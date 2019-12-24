@@ -61,7 +61,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = pulseaudio memory cpu wlan eth battery date powermenu
+modules-right = xbacklight pulseaudio memory cpu wlan eth battery date powermenu
 tray-position = right
 tray-padding = 0
 ;tray-background = #0063ff
@@ -88,7 +88,7 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
@@ -193,10 +193,11 @@ bar-width = 10
 bar-indicator = |
 bar-indicator-foreground = #fff
 bar-indicator-font = 2
-bar-fill = ─
+
+bar-fill = x
 bar-fill-font = 2
 bar-fill-foreground = #9f78e1
-bar-empty = ─
+bar-empty = o
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
@@ -282,7 +283,7 @@ format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted =muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -293,12 +294,12 @@ bar-volume-foreground-3 = #55aa55
 bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
+bar-volume-gradient = false 
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
+bar-volume-fill = x
 bar-volume-fill-font = 2
-bar-volume-empty = ─
+bar-volume-empty = o
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
@@ -324,9 +325,9 @@ bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
+bar-volume-fill = x
 bar-volume-fill-font = 2
-bar-volume-empty = ─
+bar-volume-empty = o
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
@@ -342,24 +343,24 @@ format-charging-underline = ${colors.light-green}
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${colors.light-red}
 
-format-full-prefix = " "
+format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 =
+ramp-capacity-1 =
+ramp-capacity-2 =
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 =
+animation-charging-1 =
+animation-charging-2 =
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 =
+animation-discharging-1 =
+animation-discharging-2 =
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -377,9 +378,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 =
+ramp-1 =
+ramp-2 =
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
@@ -389,10 +390,10 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = ${colors.secondary}
+label-open = "|||| " 
+label-open-foreground = ${colors.light-red}
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.light-red}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
