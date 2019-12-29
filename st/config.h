@@ -62,6 +62,8 @@ static unsigned int cursorthickness = 2;
  */
 static int bellvolume = 0;
 
+unsigned int alpha = 0xcc; /* 80% alpha */
+
 /* default TERM value */
 char *termname = "st-256color";
 
@@ -85,30 +87,30 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#313131", 	// black
-	"#78518C",	// red
-	"#338B82",	// green
-	"#b4774b",	// yellow
-	"#355D80",	// blue
-	"#5C5491",	// magenta
-	"#5784A3",	// cyan
-	"#A9B3B7",	// white
+	"#000000", 	// black
+	"#d54e53",	// red
+	"#b9ca4a",	// green
+	"#e6c547",	// yellow
+	"#7aa6da",	// blue
+	"#c397d8",	// magenta
+	"#70c0ba",	// cyan
+	"#eaeaea",	// white
 
 	/* 8 bright colors */
-	"#4A4A4A", 	// black
-	"#AC75C4",	// red
-	"#53AA9C",	// green
-	"#C89364",	// yellow
-	"#477AB3",	// blue
-	"#7C72B9",	// magenta
-	"#6E9EB5",	// cyan
-	"#D7D8D9",	// white
+	"#666666", 	// black
+	"#ff3334",	// red
+	"#9ec400",	// green
+	"#e7c547",	// yellow
+	"#7aa6da",	// blue
+	"#b77ee0",	// magenta
+	"#54ced6",	// cyan
+	"#ffffff",	// white
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",	// foreground
-	"#121212",	// background
+	"#eaeaea",	// foreground
+	"#000000",	// background
 };
 
 /*
