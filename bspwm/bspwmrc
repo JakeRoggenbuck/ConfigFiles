@@ -2,11 +2,11 @@
 
 sxhkd &
 compton &
-polybar example &
+polybar example -r &
 
 
 bash $HOME/.scripts/bspwmstartup
-
+bash $HOME/.profile
 bspc monitor DVI-I-1 -d I II III IV
 
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -27,3 +27,4 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Emacs state=tiled
+bspc rule -a feh state=floating rectangle=800x800+0+0
