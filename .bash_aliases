@@ -1,3 +1,5 @@
+alias bstr='startx && source /home/jake/.profile'
+
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
 alias d='fasd -d'        # directory
@@ -24,6 +26,8 @@ alias lview='ls -lhFA > /tmp/list && nvim /tmp/list'
 alias v='nvim'
 alias nv='nvim'
 alias snv='sudo nvim'
+
+alias j='nvim $(pwd)'
 
 alias ra='ranger'
 alias sr='sudo ranger'
