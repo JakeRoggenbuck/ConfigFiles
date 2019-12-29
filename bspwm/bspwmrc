@@ -6,7 +6,8 @@ polybar example -r &
 
 
 bash $HOME/.scripts/bspwmstartup
-bash $HOME/.profile
+source ~/.profile
+
 bspc monitor DVI-I-1 -d I II III IV
 
 bspc monitor -d I II III IV V VI VII VIII IX X
