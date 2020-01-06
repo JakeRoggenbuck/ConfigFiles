@@ -2,11 +2,12 @@
 
 sxhkd &
 compton &
+dunst &
 xscreensaver &
 polybar example -r &
 
 bash $HOME/.scripts/bspwmstartup
-source /home/jake/.profile
+source ~/.profile
 
 bspc monitor HDMI1 -d I II III IV V VI VII VIII IX X
 
