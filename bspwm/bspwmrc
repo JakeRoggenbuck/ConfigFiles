@@ -2,15 +2,16 @@
 
 sxhkd &
 compton &
+dunst &
+xscreensaver &
 polybar example -r &
-
 
 bash $HOME/.scripts/bspwmstartup
 source ~/.profile
 
-bspc monitor DVI-I-1 -d I II III IV
+bspc monitor HDMI1 -d I II III IV V VI VII VIII IX X
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         4
 
