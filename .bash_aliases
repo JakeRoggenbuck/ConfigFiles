@@ -51,3 +51,5 @@ alias bgd='feh --bg-fill'
 alias groffme='groff -Tps -me'
 
 alias count="find . -type f | wc -l"
+
+alias gp="bgd ~/.gp"
