@@ -39,10 +39,17 @@ alias em='emacs'
 alias sem='sudo emacs'
 
 alias g='git'
-alias stat='git status'
-alias br='git branch'
-alias check='git checkout'
-alias com='git commit'
+alias ga='git add'
+alias gb='git branch'
+alias gsw='git switch'
+alias gc='git commit'
+alias gd='git diff'
+alias gf='git fetch'
+alias gl='git pull'
+alias gp='git push'
+alias gra='git remote add'
+alias gst='git status'
+alias gswc='git switch -c'
 
 alias logg='git log --graph --decorate --all'
 
@@ -53,3 +60,5 @@ alias groffme='groff -Tps -me'
 alias count="find . -type f | wc -l"
 
 alias gp="bgd ~/.gp"
+
+alias ytau="youtube-dl -x --audio-format mp3"
