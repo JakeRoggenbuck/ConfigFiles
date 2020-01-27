@@ -9,13 +9,12 @@ alias sf='fasd -sif'     # interactive file selection
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 
-alias p='fzf'
+alias p='fzf --exact --reverse'
+
+alias j='nvim $(p)'
 
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
-alias more=less
 alias tree="tree -C"
 
 alias ll='ls -lh'
@@ -28,8 +27,6 @@ alias lview='ls -lhFA > /tmp/list && nvim /tmp/list'
 alias v='nvim'
 alias nv='nvim'
 alias snv='sudo nvim'
-
-alias j='nvim $(pwd)'
 
 alias ra='ranger'
 alias sr='sudo ranger'
