@@ -8,7 +8,7 @@ super + shift + Return
 	alacritty
 
 ctrl + shift + Return
-	xfce4-terminal
+	termite -e "tmux"
 
 # program launcher
 super + q
@@ -24,7 +24,7 @@ super + @space
 	dmenu_run
 
 super + alt + l
-	xscreensaver-command -lock
+	bash ~/.scripts/bye
 
 # make sxhkd reload its configuration files:
 super + Escape
