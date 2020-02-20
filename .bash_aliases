@@ -9,9 +9,10 @@ alias sf='fasd -sif'     # interactive file selection
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 
-alias p='fzf --exact --reverse'
+alias p='fzf --reverse'
+alias pe='fzf --exact --reverse'
 
-alias j='nvim $(p)'
+alias j='nvim $(pe)'
 
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
@@ -51,15 +52,10 @@ alias gst='git status'
 alias gswc='git switch -c'
 
 alias logg='git log --graph --decorate --all'
-
 alias bgd='feh --bg-fill'
-
 alias groffme='groff -Tps -me'
-
 alias count="find . -type f | wc -l"
-
 alias gp="bgd ~/.gp"
-
 alias ytau="youtube-dl -x --audio-format mp3"
-
 alias lintit='git ls-files *.py | xargs pylint'
+alias pusho='git push origin $(git symbolic-ref --short HEAD)'

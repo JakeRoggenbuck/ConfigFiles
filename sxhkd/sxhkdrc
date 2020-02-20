@@ -2,13 +2,13 @@
 
 # terminal emulator
 super + Return
-	termite
+	st
 
 super + shift + Return
 	alacritty
 
 ctrl + shift + Return
-	termite -e "tmux"
+	termite
 
 # program launcher
 super + q
@@ -24,7 +24,7 @@ super + @space
 	dmenu_run
 
 super + alt + l
-	bash ~/.scripts/bye
+	xscreensaver-command -lock
 
 # make sxhkd reload its configuration files:
 super + Escape
