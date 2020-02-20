@@ -9,6 +9,8 @@ call plug#end()
 
 let g:airline_theme='onedark'
 
+colorscheme bubblegum-256-dark
+
 let mapleader =","
 
 set number relativenumber

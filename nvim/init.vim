@@ -1,9 +1,15 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+let g:airline_theme='onedark'
+
+colorscheme bubblegum-256-dark
 
 let mapleader =","
 
@@ -14,6 +20,9 @@ map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 " removes trailing white space
 map <leader>t :%s/ $//g
+
+map <leader>z :NERDTree<CR>
+map <leader>c :NERDTreeFocus<CR> 
 
 set splitbelow splitright
 

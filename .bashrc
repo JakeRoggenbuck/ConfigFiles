@@ -75,9 +75,9 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+		PS1='\[\e[01;34m\]\W\[\e[m\]$(__git_ps1) \[\e[01;32m\]▲\[\e[m\] '	
 	else
-		PS1='\[\033[01;37m\]$(__git_ps1) \W\[\033[00m\]\033[01;32m ▲ \[\033[00m'
+		PS1='\[\e[00;00m\]\W\[\e[01;34m\]$(__git_ps1) \[\e[01;32m\]▲\[\e[m\] '	
 	fi
 
 	alias ls='ls --color=auto'
@@ -107,7 +107,7 @@ complete -cf sudo
 # Bash won't get SIGWINCH if another process is in the foreground.
 # Enable checkwinsize so that bash will check the terminal size when
 # it regains control.  #65623
-# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+# http : / / cns www . cns . cwru . edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
 
 shopt -s expand_aliases
