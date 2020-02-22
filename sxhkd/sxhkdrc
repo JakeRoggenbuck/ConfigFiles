@@ -23,6 +23,9 @@ super + d
 super + @space
 	dmenu_run
 
+super + z
+		rofi -modi run,drun -show drun -show-icons -drun-icon-theme Adwaita -scroll-method 1 -sidebar-mode -theme solarized
+
 super + alt + l
 	xscreensaver-command -lock
 
@@ -30,22 +33,34 @@ super + alt + l
 super + Escape
 	pkill -USR1 -x sxhkd
 
+F4
+	bspc node -t pseudo_tiled
+
+F5
+	bspc node -t tiled
+
+F6
+	bspc node -t floating
+
+F7
+	bspc node -t fullscrean
+
 #audio
-super + F1
+F1
 	amixer -D pulse sset Master 0%
 
-super + F2
+F2
 	amixer -D pulse sset Master 5%-
 
-super + F3
+F3
 	amixer -D pulse sset Master 5%+
 
 #backlight
 
-super + F11
+F11
 	xbacklight -dec 5
 
-super + F12
+F12
 	xbacklight -inc 5
 
 # keyboard hot keys
