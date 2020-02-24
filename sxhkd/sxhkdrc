@@ -2,10 +2,10 @@
 
 # terminal emulator
 super + Return
-	st
+	alacritty
 
 super + shift + Return
-	alacritty
+	st
 
 ctrl + shift + Return
 	termite
