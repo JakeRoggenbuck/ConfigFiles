@@ -1,4 +1,5 @@
-alias bstr='startx && source /home/jake/.profile'
+alias bstr='WM=bspwm startx && source /home/jake/.profile'
+alias gstr='WM=gnome startx'
 
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
@@ -32,7 +33,7 @@ alias snv='sudo nvim'
 alias ra='ranger'
 alias sr='sudo ranger'
 
-alias c='clear'
+alias cl='clear'
 alias cls='clear && ls'
 
 alias em='emacs'
