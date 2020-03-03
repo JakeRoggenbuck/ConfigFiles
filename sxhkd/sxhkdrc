@@ -27,7 +27,7 @@ ctrl + space
 	bspc desktop -f '1'
 
 super + z
-		rofi -modi run,drun -show drun -show-icons -drun-icon-theme Adwaita -scroll-method 1 -sidebar-mode -theme solarized
+	rofi -modi run,drun -show drun -show-icons -scroll-method 1 -sidebar-mode
 
 super + alt + l
 	xscreensaver-command -lock
