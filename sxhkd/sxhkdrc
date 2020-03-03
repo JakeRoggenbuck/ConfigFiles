@@ -27,7 +27,7 @@ ctrl + space
 	bspc desktop -f '1'
 
 super + z
-	rofi -modi run,drun -show drun -show-icons -scroll-method 1 -sidebar-mode
+	rofi -modi run,drun -show drun -show-icons -scroll-method 1 -sidebar-mode -font "Monospace 20" -width 40 -location 7 -yoffset -10 -xoffset 10
 
 super + alt + l
 	xscreensaver-command -lock
