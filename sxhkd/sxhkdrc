@@ -2,29 +2,26 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	termite
 
 super + shift + Return
 	st
 
 ctrl + shift + Return
-	termite
+	alacritty
 
 # program launcher
 super + q
 	rofi -show window
 
 super + s
-	rofi -show run
+	dmenu_run
 
 super + d
-	dmenu_run
+	rofi -show run
 
 super + @space
 	dmenu_run
-
-ctrl + space
-	bspc desktop -f '1'
 
 super + z
 	rofi -modi run,drun -show drun -show-icons -scroll-method 1 -sidebar-mode -font "Monospace 20" -width 40 -location 7 -yoffset -10 -xoffset 10
