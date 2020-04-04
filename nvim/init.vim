@@ -9,7 +9,7 @@ call plug#end()
 
 let g:airline_theme='onedark'
 
-colorscheme bubblegum-256-dark
+colorscheme pablo
 
 let mapleader =","
 
