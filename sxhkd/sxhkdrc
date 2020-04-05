@@ -2,13 +2,13 @@
 
 # terminal emulator
 super + Return
-	termite
+	alacritty
 
 super + shift + Return
 	st
 
 ctrl + shift + Return
-	alacritty
+	termite
 
 # program launcher
 super + q
