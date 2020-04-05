@@ -12,19 +12,16 @@ ctrl + shift + Return
 
 # program launcher
 super + q
-	rofi -show window
+	rofi -show window -theme flamingo -show-icons
 
 super + s
-	dmenu_run
+	rofi -show run -theme flamingo -show-icons
 
 super + d
-	rofi -show run
+	rofi -show drun -theme flamingo -show-icons
 
 super + @space
 	dmenu_run
-
-super + z
-	rofi -modi run,drun -show drun -show-icons -scroll-method 1 -sidebar-mode -font "Monospace 20" -width 40 -location 7 -yoffset -10 -xoffset 10
 
 super + alt + l
 	xscreensaver-command -lock
