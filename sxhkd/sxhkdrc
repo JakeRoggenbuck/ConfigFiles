@@ -12,13 +12,13 @@ ctrl + shift + Return
 
 # program launcher
 super + q
-	rofi -show window -theme flamingo -show-icons
+	rofi -show window -theme nord -show-icons
 
 super + s
-	rofi -show run -theme flamingo -show-icons
+	rofi -show drun -theme nord -show-icons
 
 super + d
-	rofi -show drun -theme flamingo -show-icons
+	rofi -show run -theme nord -show-icons
 
 super + @space
 	dmenu_run
