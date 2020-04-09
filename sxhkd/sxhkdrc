@@ -23,8 +23,8 @@ super + d
 super + @space
 	dmenu_run
 
-super + alt + l
-	xscreensaver-command -lock
+super + l
+	bash .scripts/$(echo -e "lock\nbye" | rofi -theme mini-prompt -p "Lock" -dmenu)
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -62,13 +62,9 @@ F12
 
 # keyboard hot keys
 
-# dvorak
+# dvorak / us
 super + alt + d
-	bash $HOME/.scripts/dvorakkeyboard
-
-# us
-super + alt + u
-	bash $HOME/.scripts/uskeyboard
+	bash .scripts/$(echo -e "us\ndvorak" | rofi -theme mini-prompt -p "Keyboard" -dmenu)keyboard
 
 # bspwm hotkeys
 
