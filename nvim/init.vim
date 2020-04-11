@@ -4,6 +4,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'yggdroot/indentline'
+Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+" Plug 'ap/vim-css-color'
 
 call plug#end()
 
