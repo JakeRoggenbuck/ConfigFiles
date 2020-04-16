@@ -1,11 +1,11 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.43 for jake on Tue Dec  3 12:26:16 2019.
+# Written by xscreensaver-demo 5.43 for jake on Sat Jan 11 07:20:04 2020.
 # https://www.jwz.org/xscreensaver/
 
-timeout:	0:03:00
-cycle:		0:03:00
+timeout:	0:06:00
+cycle:		0:06:00
 lock:		True
-lockTimeout:	0:06:00
+lockTimeout:	0:10:00
 passwdTimeout:	0:00:30
 visualID:	default
 installColormap:    True
@@ -31,11 +31,11 @@ dpmsSuspend:	2:00:00
 dpmsOff:	4:00:00
 grabDesktopImages:  True
 grabVideoFrames:    False
-chooseRandomImages: False
+chooseRandomImages: True
 imageDirectory:	
 
 mode:		one
-selected:	234
+selected:	24
 
 textMode:	file
 textLiteral:	XScreenSaver
@@ -279,6 +279,7 @@ programs:								      \
 				vfeedback -root				    \n\
   GL: 				deepstars -root				    \n\
   GL: 				gravitywell -root			    \n\
+  GL: 				electricsheep --root 1			    \n\
 
 
 pointerPollTime:    0:00:05

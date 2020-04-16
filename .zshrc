@@ -18,7 +18,7 @@ zstyle ':vcs_info:git:*' formats '%b'
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
 
-PROMPT='%B%F{240}%1~%f%b ${vcs_info_msg_0_} ▲% '
+PROMPT='%B%F{white}%1~%f%b %F{blue}${vcs_info_msg_0_} %F{green}▲%F{white} % '
 
 alias bstr='startx && source /home/jake/.profile'
 
@@ -40,6 +40,7 @@ alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias tree="tree -C"
 
+alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -lah'
