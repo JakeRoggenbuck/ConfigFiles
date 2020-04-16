@@ -20,6 +20,16 @@ cinna)
 		  exec cinnamon-session
 		  ;;
 
+catwm)
+		  exec catwm
+		  exec /home/jake/.scripts/catstart &
+		  ;;
+
+lwm)  
+		exec /home/jake/.scripts/lwmstart &
+		exec lwm
+		  ;;
+
 *)
          exec bspwm
           ;;
