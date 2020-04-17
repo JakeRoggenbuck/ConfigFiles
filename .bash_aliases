@@ -1,5 +1,9 @@
 alias bstr='WM=bspwm startx && source /home/jake/.profile'
-alias gstr='WM=gnome startx'
+
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
 
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
