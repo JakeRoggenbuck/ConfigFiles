@@ -18,7 +18,7 @@ super + s
 	rofi -show drun -theme nord -show-icons
 
 super + d
-	rofi -show run -theme nord -show-icons
+	dmenu_run
 
 super + @space
 	dmenu_run
