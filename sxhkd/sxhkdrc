@@ -23,7 +23,7 @@ super + d
 super + @space
 	dmenu_run
 
-super + l
+super + alt + l
 	bash .scripts/$(echo -e "bye" | dmenu  -p "Lock")
 
 # make sxhkd reload its configuration files:
