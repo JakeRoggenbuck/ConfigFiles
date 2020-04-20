@@ -24,7 +24,7 @@ super + @space
 	dmenu_run
 
 super + l
-	bash .scripts/$(echo -e "lock\nbye" | rofi -theme mini-prompt -p "Lock" -dmenu)
+	bash .scripts/$(echo -e "bye" | dmenu  -p "Lock")
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -44,13 +44,13 @@ F7
 
 #audio
 F1
-	amixer -D pulse sset Master 0%
+	amixer set Master 0%
 
 F2
-	amixer -D pulse sset Master 5%-
+	amixer set Master 5%-
 
 F3
-	amixer -D pulse sset Master 5%+
+	amixer set Master 5%+
 
 #backlight
 
@@ -64,7 +64,7 @@ F12
 
 # dvorak / us
 super + alt + d
-	bash .scripts/$(echo -e "us\ndvorak" | rofi -theme mini-prompt -p "Keyboard" -dmenu)keyboard
+	bash .scripts/$(echo -e "us\ndvorak" | dmenu -p "Keyboard")keyboard
 
 # bspwm hotkeys
 
