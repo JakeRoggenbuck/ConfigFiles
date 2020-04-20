@@ -8,11 +8,10 @@ polybar example &
 redshift -P -O 3500 &
 
 bash $HOME/.scripts/bspwmstartup
-source ~/.profile
 
-bspc config border_width         0
-bspc config focused_border_color "#ababab"
-bspc config window_gap           4
+bspc config border_width         4
+bspc config focused_border_color "#9b9b9b"
+bspc config window_gap           10
 bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
