@@ -91,4 +91,4 @@ alias gp="bgd ~/.gp"
 alias ytau="youtube-dl -x --audio-format mp3"
 alias lintit='git ls-files *.py | xargs pylint'
 alias pusho='git push origin $(git symbolic-ref --short HEAD)'
-
+alias vos="sox -t pulseaudio default -t pulseaudio null pitch -200 rate -v -L -b 90 20k gain -10"
