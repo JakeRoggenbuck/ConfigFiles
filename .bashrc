@@ -80,6 +80,7 @@ alias gf='git fetch'
 alias gl='git pull'
 alias gp='git push'
 alias gra='git remote add'
+alias gdc='git diff --cached'
 alias gst='git status'
 alias gswc='git switch -c'
 
