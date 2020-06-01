@@ -19,3 +19,6 @@ colorscheme gruvbox
 set viminfo+=n~/.config/nvim/viminfo
 let g:indentLine_char = '|'
 "let g:lightline = {'colorscheme': 'seoul256'}
+
+map <leader>r :!command cargo run<CR>
+map <leader>b :!command cargo run<CR>
