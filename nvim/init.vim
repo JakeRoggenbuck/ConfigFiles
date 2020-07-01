@@ -1,9 +1,10 @@
 call plug#begin('~/.vim/plugged')
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
-Plug 'yggdroot/indentline'
-"Plug 'itchyny/lightline.vim'
+Plug 'baskerville/bubblegum'
+Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -22,3 +23,13 @@ let g:indentLine_char = '|'
 
 map <leader>r :!command cargo run<CR>
 map <leader>b :!command cargo run<CR>
+
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
+nnoremap <C-p> :GFiles<CR>
+
+set nocompatible
+filetype plugin on
+syntax on

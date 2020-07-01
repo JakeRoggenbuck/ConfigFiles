@@ -9,12 +9,15 @@ redshift -P -O 3500 &
 
 bash $HOME/.scripts/bspwmstartup
 
-bspc config border_width         4
-bspc config focused_border_color "#9b9b9b"
-bspc config window_gap           10
+bspc config border_width         6
+bspc config focused_border_color "#21a6f6"
+bspc config window_gap           0
 bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Gimp state=floating follow=on
 bspc rule -a Emacs state=tiled
+bspc rule -a Zathura state=tiled
+
+(ps x | grep bspswallow | grep -v grep) || bspswallow &

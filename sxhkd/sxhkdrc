@@ -23,6 +23,9 @@ super + d
 super + @space
 	dmenu_run
 
+F7
+	scrot
+
 super + alt + l
 	bash .scripts/$(echo -e "bye\nblur-lock" | dmenu  -p "Lock")
 
