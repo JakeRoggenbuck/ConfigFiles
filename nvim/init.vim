@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+Plug 'junegunn/goyo.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
 Plug 'baskerville/bubblegum'
@@ -17,6 +18,8 @@ Plug 'roosta/srcery'
 Plug 'joshdick/onedark.vim'
 Plug 'ajh17/spacegray.vim'
 Plug 't9md/vim-choosewin'
+Plug 'airblade/vim-gitgutter'
+Plug 'jakeroggenbuck/vim-character-creator'
 call plug#end()
 
 let mapleader =","
@@ -31,6 +34,8 @@ set viminfo+=n~/.config/nvim/viminfo
 let g:notes_directories = ['~/Library/vim-notes']
 let g:sneak#label = 1
 let g:choosewin_overlay_enable = 1
+
+set updatetime=200
 
 nmap <leader>-  <Plug>(choosewin)
 " Compile and build rust
@@ -66,12 +71,6 @@ nmap <leader>gs :G<CR>
 " Merge conflicts
 nmap <leader>gdj :diffget //3<CR>
 nmap <leader>gdf :diffget //2<CR>
-
-" Complete these things
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
 
 " Move lines
 nnoremap <leader>H :m-2<cr>==
