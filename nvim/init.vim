@@ -26,34 +26,91 @@ set splitbelow splitright
 set ts=4 sw=4
 set history=1000
 set undolevels=1000
-colorscheme gruvbox
+colorscheme iceberg
 set viminfo+=n~/.config/nvim/viminfo
 let g:notes_directories = ['~/Library/vim-notes']
 let g:sneak#label = 1
 let g:choosewin_overlay_enable = 1
 
-nmap  -  <Plug>(choosewin)
+nmap <leader>-  <Plug>(choosewin)
+" Compile and build rust
 nmap <leader>r :!command cargo run<CR>
 nmap <leader>b :!command cargo run<CR>
 
-" prefix with s: for local script-only functions
-function! g:Initialize()
-  let lint = expand('%:p')
-  return lint
+function! g:GetFilePath()
+  let path = expand('%:p')
+  return path
 endfunction
 
-nmap <leader>l :execute ":!command black '" . g:Initialize() . "'"<CR>
+" Lint python using black
+nmap <leader>l :execute ":!command black '" . g:GetFilePath() . "'"<CR>
 
+" Pusho
 nmap <leader>ps :!command git push origin $(git symbolic-ref --short HEAD)<CR>
 
+" Lint using flake8
 autocmd FileType python map <leader>lm :call flake8#Flake8()<CR>
 
-nmap <leader>f :GFiles<CR>
+" Toggle search highlighting
+nmap <silent> <leader>/ :set hlsearch!<cr>
+
+" Change current directory to the directory of the file in buffer
+nmap <silent> <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Git files/ files
+nmap <leader>gf :GFiles<CR>
+nmap <leader>f :Files<CR>
+" Git status
 nmap <leader>gs :G<CR>
 
-nmap <leader>gj :diffget //3<CR>
-nmap <leader>gf :diffget //2<CR>
+" Merge conflicts
+nmap <leader>gdj :diffget //3<CR>
+nmap <leader>gdf :diffget //2<CR>
 
+" Complete these things
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+
+" Move lines
+nnoremap <leader>H :m-2<cr>==
+nnoremap <leader>J :m+<cr>==
+xnoremap <leader>K :m-2<cr>gv=gv
+xnoremap <leader>L :m'>+<cr>gv=gv
+
+" New buffer
+nnoremap <leader>B :enew<cr>
+
+" Change buffers
+nnoremap <Tab> :bnext<cr>
+nnoremap <S-Tab> :bprevious<cr>
+" Cycle between last two open buffers
+nnoremap <leader><leader> <c-^>
+
+" Split window
+nnoremap <silent> <C-h> :call WinMove('h')<cr>
+nnoremap <silent> <C-j> :call WinMove('j')<cr>
+nnoremap <silent> <C-k> :call WinMove('k')<cr>
+nnoremap <silent> <C-l> :call WinMove('l')<cr>
+
+function! WinMove(key)
+  let t:curwin = winnr()
+  exec "wincmd ".a:key
+  if (t:curwin == winnr())
+    if (match(a:key,'[jk]'))
+      wincmd v
+    else
+      wincmd s
+    endif
+    exec "wincmd ".a:key
+  endif
+endfunction
+
+" Commit
+nmap <leader>gc :Gcommit
+
+" Add blank line
 nmap <leader>po o<Esc>k
 nnoremap <C-p> :GFiles<CR>
 
