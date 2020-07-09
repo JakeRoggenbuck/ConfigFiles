@@ -20,6 +20,10 @@ Plug 'ajh17/spacegray.vim'
 Plug 't9md/vim-choosewin'
 Plug 'airblade/vim-gitgutter'
 Plug 'jakeroggenbuck/vim-character-creator'
+Plug 'jakeroggenbuck/vim-selection-test'
+Plug 'jakeroggenbuck/vim-snow-script-syntax'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'junegunn/rainbow_parentheses.vim'
 call plug#end()
 
 let mapleader =","
@@ -35,12 +39,15 @@ let g:notes_directories = ['~/Library/vim-notes']
 let g:sneak#label = 1
 let g:choosewin_overlay_enable = 1
 
+let g:rainbow#max_level = 16
+let g:rainbow#pairs = [['(', ')'], ['[', ']']]
+
+" Exit terminal mode
+tnoremap <Esc> <C-\><C-n>
+
 set updatetime=200
 
 nmap <leader>-  <Plug>(choosewin)
-" Compile and build rust
-nmap <leader>r :!command cargo run<CR>
-nmap <leader>b :!command cargo run<CR>
 
 function! g:GetFilePath()
   let path = expand('%:p')

@@ -1,0 +1,10 @@
+[user]
+	name = jakeroggenbuck
+	email = jakeroggenbuck2@gmail.com
+	signingkey = 309BBC91408E793E96348FEF4425CCA7AF97BD58
+[commit]
+	gpgSign = true
+[core]
+	editor = nvim
+[pull]
+	rebase = false
