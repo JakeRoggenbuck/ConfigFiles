@@ -16,6 +16,4 @@
 
 * bash aliases
 
-* wallpapers
-
 and more
