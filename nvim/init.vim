@@ -24,6 +24,8 @@ Plug 'jakeroggenbuck/vim-selection-test'
 Plug 'jakeroggenbuck/vim-snow-script-syntax'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
 call plug#end()
 
 let mapleader =","
@@ -34,6 +36,7 @@ map <leader>o :setlocal spell! spelllang=en_us<CR>
 set splitbelow splitright
 " Tab stop
 set ts=4 sw=4
+set encoding=UTF-8
 set history=1000
 set undolevels=1000
 colorscheme iceberg
@@ -74,6 +77,9 @@ nmap <silent> <leader>/ :set hlsearch!<cr>
 
 " Change current directory to the directory of the file in buffer
 nmap <silent> <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+let g:ctrlp_funky_syntax_highlight = 1
 
 " Git files/ files
 nmap <leader>gf :GFiles<CR>
