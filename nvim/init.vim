@@ -28,34 +28,40 @@ call plug#end()
 
 let mapleader =","
 set number
+" Spelling
 map <leader>o :setlocal spell! spelllang=en_us<CR>
+" Set splitting
 set splitbelow splitright
+" Tab stop
 set ts=4 sw=4
 set history=1000
 set undolevels=1000
 colorscheme iceberg
 set viminfo+=n~/.config/nvim/viminfo
+" Notes
 let g:notes_directories = ['~/Library/vim-notes']
+" Tab airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+" Sneaking
 let g:sneak#label = 1
+" Window selection
 let g:choosewin_overlay_enable = 1
-
+" Rainbow parentheses
 let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']']]
 
 " Exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
+" Git Gutter updatetime
 set updatetime=200
 
+" Choose window
 nmap <leader>-  <Plug>(choosewin)
 
-function! g:GetFilePath()
-  let path = expand('%:p')
-  return path
-endfunction
-
 " Lint python using black
-nmap <leader>l :execute ":!command black '" . g:GetFilePath() . "'"<CR>
+nmap <leader>l :execute ":!command black '" . expand('%:p') . "'"<CR>
 
 " Pusho
 nmap <leader>ps :!command git push origin $(git symbolic-ref --short HEAD)<CR>
@@ -100,6 +106,7 @@ nnoremap <silent> <C-j> :call WinMove('j')<cr>
 nnoremap <silent> <C-k> :call WinMove('k')<cr>
 nnoremap <silent> <C-l> :call WinMove('l')<cr>
 
+" Move windows like window manager
 function! WinMove(key)
   let t:curwin = winnr()
   exec "wincmd ".a:key
