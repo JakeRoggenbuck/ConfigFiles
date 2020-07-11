@@ -32,6 +32,8 @@ let mapleader =","
 set number
 " Spelling
 map <leader>o :setlocal spell! spelllang=en_us<CR>
+map <leader>[s [sz=
+map <leader>]s ]sz=
 " Set splitting
 set splitbelow splitright
 " Tab stop
@@ -80,6 +82,8 @@ nmap <silent> <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 let g:ctrlp_funky_syntax_highlight = 1
+
+let g:notes_list_bullets = ['•', '◦', '▸', '▹', '▪', '▫'] 
 
 " Git files/ files
 nmap <leader>gf :GFiles<CR>
