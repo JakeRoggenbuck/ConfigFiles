@@ -1,31 +1,49 @@
 call plug#begin('~/.vim/plugged')
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes'
-Plug 'junegunn/goyo.vim'
+" Code
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'morhetz/gruvbox'
-Plug 'baskerville/bubblegum'
 Plug 'junegunn/fzf.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'justinmk/vim-sneak'
-Plug 'nvie/vim-flake8'
-Plug 'mhartington/oceanic-next'
-Plug 'cocopon/iceberg.vim'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'roosta/srcery'
-Plug 'joshdick/onedark.vim'
-Plug 'ajh17/spacegray.vim'
-Plug 't9md/vim-choosewin'
-Plug 'airblade/vim-gitgutter'
-Plug 'jakeroggenbuck/vim-character-creator'
-Plug 'jakeroggenbuck/vim-selection-test'
 Plug 'jakeroggenbuck/vim-snow-script-syntax'
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
+
+" Python
+Plug 'nvie/vim-flake8'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Organization
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+
+" Themes
+
+Plug 'morhetz/gruvbox'
+"Plug 'baskerville/bubblegum'
+"Plug 'mhartington/oceanic-next'
+
+Plug 'cocopon/iceberg.vim'
+"Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'roosta/srcery'
+"Plug 'joshdick/onedark.vim'
+"Plug 'ajh17/spacegray.vim'
+
+" Appearance
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/goyo.vim'
+
+" Navigation UI
+Plug 'justinmk/vim-sneak'
+Plug 't9md/vim-choosewin'
+
+" Misc
+"Plug 'jakeroggenbuck/vim-character-creator'
+"Plug 'jakeroggenbuck/vim-selection-test'
+
 call plug#end()
 
 let mapleader =","
