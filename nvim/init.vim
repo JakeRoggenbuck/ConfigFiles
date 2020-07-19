@@ -6,10 +6,11 @@ Plug 'jakeroggenbuck/vim-snow-script-syntax'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
+Plug 'lervag/vimtex'
 
 " Python
 Plug 'nvie/vim-flake8'
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -20,11 +21,9 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 
 " Themes
-
 Plug 'morhetz/gruvbox'
 "Plug 'baskerville/bubblegum'
 "Plug 'mhartington/oceanic-next'
-
 Plug 'cocopon/iceberg.vim'
 "Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'roosta/srcery'
@@ -74,6 +73,8 @@ let g:choosewin_overlay_enable = 1
 let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']']]
 
+let g:vimtex_view_general_viewer = "zathura"
+
 " Exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
@@ -101,7 +102,7 @@ nmap <silent> <leader>cd :cd %:p:h<cr>:pwd<cr>
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 let g:ctrlp_funky_syntax_highlight = 1
 
-let g:notes_list_bullets = ['•', '◦', '▸', '▹', '▪', '▫'] 
+let g:notes_list_bullets = ['•', '◦', '▸', '▹', '▪', '▫']
 
 " Git files/ files
 nmap <leader>gf :GFiles<CR>
@@ -151,8 +152,6 @@ endfunction
 " Commit
 nmap <leader>gc :Gcommit
 
-" Add blank line
-nmap <leader>po o<Esc>k
 nnoremap <C-p> :GFiles<CR>
 
 set nocompatible
