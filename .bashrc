@@ -23,8 +23,8 @@ source ~/.scripts/git-completion
 source ~/.scripts/git-prompt
 
 # Aliases
-
 alias bstr='WM=bspwm startx && source /home/jake/.profile'
+alias bstr='WM=dwm startx'
 
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
@@ -84,6 +84,11 @@ alias gdc='git diff --cached'
 alias gst='git status'
 alias gswc='git switch -c'
 
+alias pusho='git push origin $(git symbolic-ref --short HEAD)'
+alias pullo='git pull origin $(git symbolic-ref --short HEAD)'
+alias pullm='git pull upstream master'
+alias pullu='git pull upstream $(git symbolic-ref --short HEAD)'
+
 alias gls='git log --pretty=oneline --abbrev-commit'
 alias logg='git log --graph --decorate --all'
 alias bgd='feh --bg-fill'
@@ -92,8 +97,23 @@ alias count="find . -type f | wc -l"
 alias gp="bgd ~/.gp"
 alias ytau="youtube-dl -x --audio-format mp3"
 alias lintit='git ls-files *.py | xargs pylint'
-alias pusho='git push origin $(git symbolic-ref --short HEAD)'
 alias vos="sox -t pulseaudio default -t pulseaudio null pitch -200 rate -v -L -b 90 20k gain -10"
+
+function ckpull () {
+    if [[ "$1" =~ ^[0-9]+$ ]]; then
+	git fetch upstream pull/"$1"/head && git checkout FETCH_HEAD
+    else
+	if [ -n "$2" ]; then
+	    if [[ "$2" =~ ^[0-9]+$ ]]; then
+		git fetch "$1" pull/"$2"/head && git checkout FETCH_HEAD
+	    else
+		echo "To specify a branch and a PR, do branch first, then PR #"
+	    fi
+	else
+	    echo "Specify PR and branch name"
+	fi
+    fi
+}
 
 if [ "$TERM" = "linux" ]; then
     echo -en "\e]P0232323" #black
@@ -114,3 +134,5 @@ if [ "$TERM" = "linux" ]; then
     echo -en "\e]PFFFFFFF" #white
     clear #for background artifacting
 fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
