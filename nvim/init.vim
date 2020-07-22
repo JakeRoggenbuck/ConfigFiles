@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 " Code
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf.vim'
 Plug 'jakeroggenbuck/vim-snow-script-syntax'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -124,8 +124,8 @@ xnoremap <leader>L :m'>+<cr>gv=gv
 nnoremap <leader>B :enew<cr>
 
 " Change buffers
-nnoremap <Tab> :bnext<cr>
-nnoremap <S-Tab> :bprevious<cr>
+nnoremap <leader><Tab> :bnext<cr>
+nnoremap <leader><S-Tab> :bprevious<cr>
 " Cycle between last two open buffers
 nnoremap <leader><leader> <c-^>
 
