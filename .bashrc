@@ -5,8 +5,6 @@
 HISTSIZE=100000
 HISTFILESIZE=200000
 
-HISTFILE='/home/jake/.hist/bash_history'
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -23,8 +21,8 @@ source ~/.scripts/git-completion
 source ~/.scripts/git-prompt
 
 # Aliases
-alias bstr='WM=bspwm startx && source /home/jake/.profile'
-alias bstr='WM=dwm startx'
+alias bstr='WM=bspwm startx'
+alias dstr='WM=dwm startx'
 
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'

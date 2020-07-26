@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 " Code
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf.vim'
 Plug 'jakeroggenbuck/vim-snow-script-syntax'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -42,6 +42,8 @@ Plug 't9md/vim-choosewin'
 " Misc
 "Plug 'jakeroggenbuck/vim-character-creator'
 "Plug 'jakeroggenbuck/vim-selection-test'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'jakeroggenbuck/vimage.vim'
 
 call plug#end()
 
@@ -83,6 +85,9 @@ set updatetime=200
 
 " Choose window
 nmap <leader>-  <Plug>(choosewin)
+
+let g:image_viewer = "feh"
+nmap <leader>mg :call Vimage()<CR>
 
 " Lint python using black
 nmap <leader>l :execute ":!command black '" . expand('%:p') . "'"<CR>
