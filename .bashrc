@@ -87,7 +87,6 @@ alias lintit='git ls-files *.py | xargs pylint'
 alias vos="sox -t pulseaudio default -t pulseaudio null pitch -200 rate -v -L -b 90 20k gain -10"
 alias dotup="cd ~/Repos/ConfigFiles/; python ../dot_drop/main.py"
 
-
 function ckpull () {
     if [[ "$1" =~ ^[0-9]+$ ]]; then
 	git fetch upstream pull/"$1"/head && git checkout FETCH_HEAD
