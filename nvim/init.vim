@@ -10,7 +10,7 @@ Plug 'lervag/vimtex'
 
 " Python
 Plug 'nvie/vim-flake8'
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -49,6 +49,27 @@ call plug#end()
 
 let mapleader =","
 set number
+
+"coc
+"Confirm completion with <cr>
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+"Confirm first item on <cr> if nothing is selected
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+"Use tab to navigate completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Symbol renaming.
+map <leader>n <Plug>(coc-rename)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Spelling
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 map <leader>[s [sz=
