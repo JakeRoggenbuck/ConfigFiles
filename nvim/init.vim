@@ -155,11 +155,16 @@ nnoremap <leader><S-Tab> :bprevious<cr>
 " Cycle between last two open buffers
 nnoremap <leader><leader> <c-^>
 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Split window
-nnoremap <silent> <C-h> :call WinMove('h')<cr>
-nnoremap <silent> <C-j> :call WinMove('j')<cr>
-nnoremap <silent> <C-k> :call WinMove('k')<cr>
-nnoremap <silent> <C-l> :call WinMove('l')<cr>
+nnoremap <silent> <leader><C-h> :call WinMove('h')<cr>
+nnoremap <silent> <leader><C-j> :call WinMove('j')<cr>
+nnoremap <silent> <leader><C-k> :call WinMove('k')<cr>
+nnoremap <silent> <leader><C-l> :call WinMove('l')<cr>
 
 " Move windows like window manager
 function! WinMove(key)
