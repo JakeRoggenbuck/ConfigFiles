@@ -3,10 +3,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf.vim'
 Plug 'jakeroggenbuck/vim-snow-script-syntax'
+Plug 'jakeroggenbuck/vim-impulse-syntax'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'lervag/vimtex'
+
+Plug 'jakeroggenbuck/vim-game-snake'
 
 " Python
 Plug 'nvie/vim-flake8'
