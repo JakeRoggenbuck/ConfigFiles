@@ -67,6 +67,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Symbol renaming.
 map <leader>n <Plug>(coc-rename)
 
+map <leader><C-s> :w<CR>:source %<CR>
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)

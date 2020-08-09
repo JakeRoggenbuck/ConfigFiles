@@ -41,7 +41,7 @@ alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -lah'
 alias lt='ls --human-readable --size -1 -S --classify'
-alias last='ls -t1l'
+alias lastt='ls -t1l'
 alias lview='ls -lhFA > /tmp/list && nvim /tmp/list'
 # Nvim
 alias v='nvim'
