@@ -86,7 +86,7 @@ set ts=4 sw=4
 set encoding=UTF-8
 set history=1000
 set undolevels=1000
-colorscheme iceberg
+colorscheme gruvbox
 set viminfo+=n~/.config/nvim/viminfo
 " Notes
 let g:notes_directories = ['~/Library/vim-notes']
