@@ -103,6 +103,26 @@ function ckpull () {
     fi
 }
 
+ex () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   echo -e "tar -xjf\ntar -cjvf"   ;;
+      *.tar.gz)    echo -e "tar -xzf\ntar -czvf"   ;;
+      *.bz2)       echo -e "bunzip2\nbzip2 -zk"   ;;
+      *.rar)       echo -e "unrar -x"   ;;
+      *.gz)        echo -e "gunzip"    ;;
+      *.tar)       echo -e "tar -xf"    ;;
+      *.tbz2)      echo -e "tar -xjf"   ;;
+      *.tgz)       echo -e "tar -xzf"   ;;
+      *.zip)       echo -e "unzip"     ;;
+      *.Z)         echo -e "uncompress";;
+      *.7z)        echo -e "7z -x"      ;;
+      *.xz)        echo -e "xz -d\nxz\nuse num 1-9 as flag for compression rate"      ;;
+      *)           echo -e "cannot be extracted via ex()" ;;
+    esac
+  fi
+}
+
 if [ "$TERM" = "linux" ]; then
     echo -en "\e]P0232323" #black
     echo -en "\e]P82B2B2B" #darkgrey
