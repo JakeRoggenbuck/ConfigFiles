@@ -124,6 +124,9 @@ nmap <leader>ps :!command git push origin $(git symbolic-ref --short HEAD)<CR>
 " Lint using flake8
 autocmd FileType python map <leader>lm :call flake8#Flake8()<CR>
 
+" Calcurse md format
+autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes* set filetype=markdown
+
 " Toggle search highlighting
 nmap <silent> <leader>/ :set hlsearch!<cr>
 
